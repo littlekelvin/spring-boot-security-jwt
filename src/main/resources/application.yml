@@ -1,0 +1,41 @@
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+  datasource:
+    url: jdbc:mysql://localhost:3306/mysql
+    username: root
+    password: mysql
+    driver-class-name: com.mysql.jdbc.Driver
+    #?????
+    maxActive: 20
+    #?????
+    initialSize: 1
+    #??????????
+    maxWait: 60000
+  jpa:
+    show-sql: true
+    database: MySQL
+    hibernate:
+      ddl-auto: update
+  jwt:
+    tokenExpirationTime: 15 # Number of minutes
+    tokenRefreshExpirationTime: 60 # Minutes
+    tokenIssuer: http://kelvin.com
+    tokenSigningKey: xm8EV6Hy5RMFK4EEACIDAwQus
+  freemarker:
+    allow-request-override: false
+    cache: true
+    check-template-location: true
+    charset: utf-8
+    content-type: text/html
+    expose-request-attributes: false
+    expose-spring-macro-helpers: false
+    expose-session-attributes: false
+    suffix: .ftl
+    prefix:
+    request-context-attribute: freemarker
+    template-loader-path: classpath:/templates/
+server:
+  port: 8090

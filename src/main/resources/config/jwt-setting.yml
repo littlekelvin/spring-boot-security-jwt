@@ -1,0 +1,5 @@
+jwt:
+  tokenExpirationTime: 20 # Number of minutes
+  tokenRefreshExpirationTime: 60 # Minutes
+  tokenIssuer: http://kelvin.com
+  tokenSigningKey: xm8EV6Hy5RMFK4EEACIDAwQus
